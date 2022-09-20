@@ -24,7 +24,7 @@ const GifGrid = ({ category, amount, onDeleteGifs }) => {
 
       <div className="card-grid mt-2">
         {images.map((img) => (
-          <GifCard key={img.id} data={img} />
+          <GifCard key={img.id} {...img} />
         ))}
       </div>
     </>

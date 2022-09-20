@@ -28,8 +28,6 @@ const GifExpertApp = () => {
     setCategories(arr);
   };
 
-  
-
   return (
     <>
       <header className="container">
