@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const AddCategory = ({ onNewCategory, onChangeAmount }) => {
   const [inputValue, setInputValue] = useState("");
@@ -17,11 +18,9 @@ const AddCategory = ({ onNewCategory, onChangeAmount }) => {
     setInputValue("");
   };
 
-
-
   return (
     <>
-      <form onSubmit={handleSubmit} className="mt-2 flex-column">
+      <form onSubmit={handleSubmit} id="form" className="mt-2 flex-column">
         <input
           className="boxSearch"
           type="text"
@@ -38,13 +37,18 @@ const AddCategory = ({ onNewCategory, onChangeAmount }) => {
             min={5}
             max={100}
             step={5}
-            value={inputRange}
+            value={Number(inputRange)}
             onChange={(e) => setInputRange(Number(e.target.value))}
           />
         </div>
       </form>
     </>
   );
+};
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired,
+  onChangeAmount: PropTypes.func.isRequired,
 };
 
 export default AddCategory;

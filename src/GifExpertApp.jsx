@@ -19,8 +19,8 @@ const GifExpertApp = () => {
   };
 
   const deleteGif = (keyword) => {
-    categories = categories.filter((category) => category !== keyword);
-    setCategories(categories);
+    const newCategories = categories.filter((category) => category !== keyword);
+    setCategories(newCategories);
   };
 
   const onDeleteAllGifs = (arr) => {
