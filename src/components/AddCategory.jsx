@@ -20,7 +20,12 @@ const AddCategory = ({ onNewCategory, onChangeAmount }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} id="form" className="mt-2 flex-column">
+      <form
+        onSubmit={handleSubmit}
+        id="form"
+        className="mt-2 flex-column"
+        aria-label="formulario"
+      >
         <input
           className="boxSearch"
           type="text"
@@ -38,6 +43,7 @@ const AddCategory = ({ onNewCategory, onChangeAmount }) => {
             max={100}
             step={5}
             value={Number(inputRange)}
+            aria-label="range"
             onChange={(e) => setInputRange(Number(e.target.value))}
           />
         </div>
