@@ -32,6 +32,7 @@ const AddCategory = ({ onNewCategory, onChangeAmount }) => {
           placeholder="Buscar gifs"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          aria-label="inputSearch"
         />
         <div className="range mt-2">
           <label htmlFor="range text-white">{inputRange} gifs</label>
